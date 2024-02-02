@@ -23,9 +23,9 @@ function operate(first, second, operator) {
         return add(first, second);
     } else if (operator === '-') {
         return subtract(first, second);
-    } else if (operator === '*') {
+    } else if (operator === '×') {
         return multiply(first, second);
-    } else if (operator === '/') {
+    } else if (operator === '÷') {
         return divide(first, second);
     } else {
         return 'ERROR'
@@ -34,7 +34,14 @@ function operate(first, second, operator) {
 
 let invisibleBtns = document.querySelectorAll('.invisble')
 for (let i = 0; i < invisibleBtns.length; i++) {
-        invisibleBtns[i].disabled = true;
+    invisibleBtns[i].disabled = true;
+};
+
+let btns = document.querySelectorAll('button')
+for (let i = 0; i < btns.length; i++) {
+    btns[i].addEventListener('click', () => {
+        alert(btns[i].textContent);
+    });
 };
 
 
