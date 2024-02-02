@@ -41,6 +41,7 @@
 button {
     border-radius: 10px;
     height: 100%;
+    font-size: xx-large;
 }
 
 #answer,
@@ -54,4 +55,10 @@ button {
 
 .operations button {
     background-color: rgb(77, 178, 236);
+}
+
+.invisible {
+    background-color: black;
+    padding: 0;
+    border: solid black;
 }

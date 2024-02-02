@@ -25,15 +25,18 @@ function operate(first, second, operator) {
         return subtract(first, second);
     } else if (operator === '*') {
         return multiply(first, second);
-    } else {
+    } else if (operator === '/') {
         return divide(first, second);
-    };
+    } else {
+        return 'ERROR'
+    }
 };
 
-console.log(operate(1, 2, '/'))
-console.log(operate(1,2, '-'))
+let invisibleBtns = document.querySelectorAll('.invisble')
+for (let i = 0; i < invisibleBtns.length; i++) {
+        invisibleBtns[i].disabled = true;
+};
 
-let firstNumber;
-let secondNumber;
-let operator;
+
+
 
