@@ -37,10 +37,18 @@ for (let i = 0; i < invisibleBtns.length; i++) {
     invisibleBtns[i].disabled = true;
 };
 
+let operation = [];
 let btns = document.querySelectorAll('button')
 for (let i = 0; i < btns.length; i++) {
     btns[i].addEventListener('click', () => {
-        alert(btns[i].textContent);
+        operation.push(btns[i].textContent);
+        let equation = document.querySelector('#equation')
+        
+        if (operation.length === 0) {
+            equation.textContent = operation[i]
+        } else {
+            equation.textContent = equation.textContent + ' ' + operation[operation.length - 1]
+        }
     });
 };
 
