@@ -11,16 +11,14 @@ function multiply(first, second) {
 }
 
 function divide(first, second) {
-    if (second === 0) {
-        return "ERROR"
-    } else {
-        return (+first / +second).toFixed(2);
-    };
+    return (+first / +second).toFixed(2);
 }
 
 function operate(first, second, operator) {
     if ((first === '') || (second === '') || (!['+', '-', '×', '÷'].includes(operator))) {
         return "ERROR"
+    } else if ((second === "0") && (operator === '÷')){
+        return "Allah reham kare bhai aap par"
     }
 
     if (operator === '+') {
