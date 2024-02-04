@@ -18,7 +18,7 @@ function operate(first, second, operator) {
     if ((first === '') || (second === '') || (!['+', '-', '×', '÷'].includes(operator))) {
         return "ERROR"
     } else if ((second === "0") && (operator === '÷')){
-        return "Allah reham kare bhai aap par"
+        return "Allah reham kare bhai/baaji aap par"
     }
 
     if (operator === '+') {
@@ -41,6 +41,7 @@ function reset() {
     equ.textContent = ''
 }
 
+let firstNegative = true
 let firstOperator = true;
 let firstNum;
 let secondNum;
@@ -62,7 +63,8 @@ for (let i = 0; i < btns.length; i++) {
             reset()
             ans.textContent = ''
             previousAnswer = ''
-        } else if ((btns[i].textContent === '-') && (!firstNum) && (!operator)) {
+        } else if ((btns[i].textContent === '-') && (!firstNum) && (!operator) && (firstNegative === true)) {
+            firstNegative = false
             equ.textContent += btns[i].textContent;
             equation += btns[i].textContent;
         } else if (!['+', '-', '×', '÷', 'AC', '='].includes(btns[i].textContent)) {
