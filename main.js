@@ -64,6 +64,9 @@ for (let i = 0; i < btns.length; i++) {
             reset()
             ans.textContent = ''
             previousAnswer = ''
+        } else if ((btns[i].textContent === '-') && (!firstNum) && (!operator)) {
+            equ.textContent += btns[i].textContent;
+            equation += btns[i].textContent;
         } else if (!['+', '-', '×', '÷', 'AC', '='].includes(btns[i].textContent)) {
             equ.textContent += btns[i].textContent;
             equation += btns[i].textContent;
