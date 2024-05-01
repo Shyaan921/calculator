@@ -18,7 +18,7 @@ function operate(first, second, operator) {
     if ((first === '') || (second === '') || (!['+', '-', '×', '÷'].includes(operator))) {
         return "ERROR"
     } else if ((second === "0") && (operator === '÷')){
-        return "Allah reham kare bhai/baaji aap par"
+        return "૮ ˙Ⱉ˙ ა rawr!"
     }
 
     if (operator === '+') {
